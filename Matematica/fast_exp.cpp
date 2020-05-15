@@ -18,8 +18,8 @@ ll fastExp(ll base, ll e) {
 
    while(e>0) {
       if(e%2==1)
-         resp*=base;
-      base*=base;
+         resp=(resp*base)%MOD;
+      base=(base*base)%MOD;
       e/=2;
    }
 
