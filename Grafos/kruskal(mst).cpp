@@ -16,7 +16,6 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fLL;
 using namespace std;
 
 int n, m, pai[MAX], peso[MAX];
-int cnt;
 
 int find(int x) {
     while (pai[x] != x) x = pai[x];
@@ -59,8 +58,7 @@ int main() {
                 merge(mst[i].s.f, mst[i].s.s);
             }
         }
-        cout << "Instancia " << ++cnt << "\n";
-        cout << sum << "\n\n";
+        cout << sum << "\n";
     }
 
     return 0;
