@@ -29,15 +29,10 @@ ll getOccurence(ll n, ll d) {
         int x = n%10;
         n /= 10;
 
-        if (x > d)
-            result += (n+1)*pot;
-        else
-            result += n*pot;
-        if (x == d)
-            result += rem+1;
-
-        if (d == 0)
-            result -= pot;
+        if (x > d) result += (n+1)*pot;
+        else result += n*pot;
+        if (x == d) result += rem+1;
+        if (d == 0)result -= pot;
 
         rem += pot * x;
         pot *= 10;

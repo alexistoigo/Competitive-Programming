@@ -31,19 +31,14 @@ void factorial() {
 }
 
 ll binary_exp(ll x, ll n) {
-    if (n == 0) {
-        return 1;
-    } else if (n == 1) {
-        return x % MOD;
-    } else {
+    if (n == 0) return 1;
+	else if (n == 1) return x % MOD;
+    else {
         ll temp = binary_exp(x, n / 2);
         temp = (temp * temp) % MOD;
 
-        if (n % 2 == 0) {
-            return temp;
-        } else {
-            return ((x % MOD) * temp) % MOD;
-        }
+        if (n % 2 == 0) return temp;
+        else return ((x % MOD) * temp) % MOD;
     }
 }
 
